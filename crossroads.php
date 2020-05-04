@@ -21,13 +21,13 @@ foreach ($a as $a_row) {
         continue;
     }
 
-    $match = false;
+    $matched = false;
 
     foreach ($b as $b_row) {
         if (empty($b_head)) {
             $b_head = $b_row;
 
-            fputcsv($inner, array_merge($a_head, $b_head, ['ACOL_MATCH', 'ACOL_VAL', 'BCOL_MATCH', 'BCOL_VAL']));
+            fputcsv($inner, array_merge($a_head, $b_head, ['ACOL_NAME', 'ACELL_VAL', 'BCOL_NAME', 'BCELL_VAL']));
             fputcsv($outer, $a_head);
 
             continue;
@@ -35,16 +35,16 @@ foreach ($a as $a_row) {
 
         foreach ($a_row as $a_col => $a_val) {
             foreach ($b_row as $b_col => $b_val) {
-                if (!$match && match($a_val, $b_val)) {
-                    $match = true;
+                if (!$matched && match($a_val, $b_val)) {
                     fputcsv($inner, array_merge($a_row, $b_row, [$a_head[$a_col], $a_val, $b_head[$b_col], $b_val]));
+                    $matched = true;
                     continue;
                 }
             }
         }
     }
 
-    if (!$match) {
+    if (!$matched) {
         fputcsv($outer, array_merge($a_row));
     }
 }
