@@ -18,7 +18,7 @@ São os dados que foram encontradas em A **e** em B.
 
 | Nova coluna | Descrição |
 | --- | --- |
-| `ACOL_NAME` | Coluna que deu matched em `A` |
-| `ACELL_VAL` | Valor que deu matched em `A` |
-| `BCOL_NAME` | Coluna que deu matched em `B` |
-| `BCELL_VAL` | Valor que deu matched em `B` |
+| `ACOL_NAME` | Coluna que deu _match_ em `A` |
+| `ACELL_VAL` | Valor que deu _match_ em `A` |
+| `BCOL_NAME` | Coluna que deu _match_ em `B` |
+| `BCELL_VAL` | Valor que deu _match_ em `B` |
