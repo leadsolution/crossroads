@@ -1,0 +1,14 @@
+{
+    "name": "leadsolution/crossroads",
+    "description": "Reads two CSV files and finds matches across all columns.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "leadsolution",
+            "email": "contato@leadsolution.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
